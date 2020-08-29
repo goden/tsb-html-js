@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        body
+        {
+        }
+
+               div {
+            width: 1200px;
+            height: 320px;
+        }
+
+                div#paddingBox {
+                    padding: 20px;
+                    border: 10px dotted blue;
+                    background: Red url("../images/logo.png") no-repeat;
+                    background-origin: padding-box; /*for IE*/
+                }
+
+                div#borderBox {
+                    padding: 20px;
+                    border: 10px dotted blue;
+                    background: Red url("../images/logo.png") no-repeat;
+                    background-origin: border-box;
+                }
+
+                div#contentBox {
+                    padding: 20px;
+                    border: 10px dotted blue;
+                    background: Red url("../images/logo.png") no-repeat;
+                    -moz-background-origin: content-box;
+                    -webkit-background-origin: content-box;
+                    -o-background-origin: content-box;
+                    background-origin: content-box;
+                }
+    </style>
+</head>
+<body>
+    背景圖片的原點，套用在Block Level Element， Body不適合
+
+  <div id="paddingBox">
+      padding-box是background-origin的預設值，
+    起點位置為預設內距padding外邊緣
+  
+  </div>
+    <br />
+    <div id="borderBox">
+        borderBox
+    框線boder的外邊緣
+    </div>
+    <br />
+    <div id="contentBox">
+        contentBox內容content的外邊緣
+    </div>
+</body>
+</html>
