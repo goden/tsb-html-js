@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        /*section:first-of-type
+        {
+            background: red;
+        }*/
+
+        /*section:last-of-type
+        {
+            background: red;
+        }*/
+
+        /*p:only-of-type
+        {
+            background: red;
+        }*/
+
+        /*p:nth-of-type(2)
+        {
+            background: red;
+        }*/
+
+        /*p:nth-last-of-type(2)
+        {
+            background: red;
+        }*/
+    </style>
+</head>
+<body>
+
+    <div>:first-of-type 選取父元素的子元素清單中，第一個element</div>
+    <div>:last-of-type  選取父元素的子元素清單中，最後第一個element</div>
+    <div>:only-of-type 選取父元素的子元素清單中，唯一有一個此type的element</div>
+    <div>:nth-of-type(n) 選取父元素的子元素清單中，第n個有此type的element</div>
+    <div>:nth-last-of-type(n) 選取父元素的子元素清單中，倒數第n個有此type的element</div>
+
+    <section>
+        <p>P1</p>
+        <div>xxxx</div>
+        <p>P2</p>
+        <p>P3</p>
+        <p>P4</p>
+        <p>P5</p>
+    </section>
+
+    <hr />
+    <section>
+        <p>P1</p>
+    </section>
+    <p>P2</p>
+    <hr />
+    <section>
+        <p>P1</p>
+        <p>P2</p>
+        <p>P3</p>
+        <p>P4</p>
+    </section>
+</body>
+</html>
+

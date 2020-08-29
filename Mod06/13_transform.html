@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+        #img1{
+
+            /*transform: translate(50px, 200px) skew(45deg);*/
+            /*transform: translate(50px, 200px) scale(0.5);*/
+
+            transition:transform 3s;
+        }
+
+        .xx
+        {
+            transform: translate(50px, 200px) rotate(720deg);
+        }
+    </style>
+</head>
+<body>
+
+    <img id="img1" src="../Images/melissa-kerr.jpg" />
+    <script>
+
+        document.getElementById("img1").onclick = function () {
+            this.className = "xx";
+        };
+    </script>
+</body>
+</html>
