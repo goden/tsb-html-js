@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        window.onload = function () {
+            document.getElementById("bntnAdd").onclick = function () {
+
+                var v1 = document.createElement("video");
+                v1.poster = "../Images/david-alexander.jpg";
+                v1.autoplay = true;
+                var t = new Date().getMilliseconds();
+                console.log(t);
+                v1.src = t % 2 == 0 ? "../Media/movie.mp4" : "../Media/bike.mp4";
+
+                document.getElementById("result").appendChild(v1);
+
+            };
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="bntnAdd" type="button" value="Add" />
+
+    <div id="result"></div>
+
+</body>
+</html>
