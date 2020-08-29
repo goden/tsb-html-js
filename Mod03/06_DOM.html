@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function change() {
+            //document.getElementById("aa").innerText = document.getElementById("txtData").value;
+            document.getElementById("aa").innerHTML = document.getElementById("txtData").value;
+        }
+
+        function append() {
+            var li = document.createElement("li"); //<li></li>
+            li.innerText = document.getElementById("txtData").value; //<li>Hello</li>
+            document.getElementById("list1").appendChild(li);
+        }
+
+        function appendOpt() {
+            var opt = document.createElement("option"); //<li></li>
+            opt.innerText = document.getElementById("txtData").value; //<li>Hello</li>
+            opt.value = document.getElementById("txtData").value; 
+            document.getElementById("Select1").appendChild(opt);
+        }
+
+    </script>
+</head>
+<body>
+
+    Data : <input id="txtData" type="text" value="Hello" />
+    <input id="Button1" type="button" value="Change" onclick="change();" />
+    <input id="Button1" type="button" value="Append" onclick="append();" />
+    <input id="Button1" type="button" value="AppendColor" onclick="appendOpt();" />
+    <hr />
+
+    <h1 id="aa">xxxxx</h1>
+
+    <ol id="list1">
+        <li>xxx</li>
+        <li>yyy</li>
+    </ol>
+
+    <select id="Select1" onchange="alert(this.value)">
+        <option>請選擇</option>
+        <option value="red">紅色</option>
+
+    </select>
+
+</body>
+</html>

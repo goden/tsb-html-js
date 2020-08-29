@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.5.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $("#Button1").click(function () {
+                //$("#aa").text($("#txtData").val());
+                $("#aa").html($("#txtData").val());
+                //$("#aa").css("color", "blue");
+                $("#aa").css({
+                    color: "green",
+                    "background-color": "yellow"
+                });
+            });
+
+            $("#Button2").bind("click", function () {
+                //1,
+                //var li = $("<li>");
+                //li.text($("#txtData").val()); 
+                //$("#list1").append(li);
+                //2,
+                //$("#list1").append("<li>" + $("#txtData").val() + "</li>");
+                //3,
+                //$("<li>").text($("#txtData").val()).appendTo($("#list1"));
+                //4,
+                $("#list1").append($("<li>").text($("#txtData").val()));
+            });
+
+            $("#Button3").bind("click", function () {
+                $("#Select1").append($("<option>").text("藍色").val("blue"));
+            })
+            
+
+            
+        });
+
+    </script>
+</head>
+<body>
+
+    Data : <input id="txtData" type="text" value="Hello" />
+    <input id="Button1" type="button" value="Change" />
+    <input id="Button2" type="button" value="Append" />
+    <input id="Button3" type="button" value="AppendColor" />
+    <hr />
+
+    <h1 id="aa">xxxxx</h1>
+
+    <ol id="list1">
+        <li>xxx</li>
+        <li>yyy</li>
+    </ol>
+
+    <select id="Select1">
+        <option>請選擇</option>
+        <option value="red">紅色</option>
+
+    </select>
+
+
+</body>
+</html>

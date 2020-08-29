@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        var names = ["John", "Mary", "Tony", "Amy"];
+
+        console.log(names.indexOf("Tony")); //2
+
+        function check() {
+            var reg = new RegExp("[a-zA-Z0-9]og");
+            if (reg.test(document.getElementById("Text1").value))
+                console.log("Correct!!");
+            else
+                console.log("Wrong!!");
+
+        }
+
+        function checkEmail() {
+            var reg = new RegExp("^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$");
+            if (reg.test(document.getElementById("txtName").value))
+                console.log("Correct!!");
+            else
+                console.log("Wrong!!");
+        }
+
+    </script>
+</head>
+<body>
+
+    Pats : <input id="Text1" type="text" />
+    <input id="Button1" type="button" value="Check" onclick="check();" />
+
+    <hr />
+    Email : <input id="txtName" type="text" />
+    <input id="Button2" type="button" value="CheckEmail" onclick="checkEmail();" />
+
+</body>
+</html>

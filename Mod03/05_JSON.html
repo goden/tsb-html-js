@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+        h1{
+            background-color:yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1 id="aa">xxx</h1>
+
+
+    <script>
+
+        //1, Javascript Literal Object Notation
+        //var emp = { "name": "John", "age": 30 };
+        //var emp = { 'name': 'John', 'age': 30 };
+        var emp = {
+            name: "John",
+            age: 30
+        };
+
+        console.log(emp.name + " -- " + emp.age);
+
+
+        //2, 把物件轉換成JSON字串
+        var s = JSON.stringify(emp);
+        console.log(s);
+
+        //3, 把JSON字串還原成物件
+        var obj = JSON.parse(s);
+        console.log(obj.name + " : " + obj.age);
+
+
+        //document.getElementById("aa").style.backgroundColor = "pink";
+        document.getElementById("aa").style["background-color"] = "green";
+    </script>
+</body>
+</html>

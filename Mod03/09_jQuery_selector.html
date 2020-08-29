@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.5.1.js"></script>
+    <script>
+
+        $(function () {
+
+            //$("h1").css("color", "red");
+            //$(".aa").css("color", "blue");
+
+            $("h1").each(function () {
+                //this.style.backgroundColor = "yellow";
+                $(this).css("color", "pink");
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <h1>xxx</h1>
+    <h1>xxx</h1>
+    <h1>xxx</h1>
+    <h1 class="aa">xxx</h1>
+    <h2>yyy</h2>
+    <h2>yyy</h2>
+    <h2 class="aa">yyy</h2>
+    <h2>yyy</h2>
+
+</body>
+</html>
