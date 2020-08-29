@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        "use strict";
+
+        var name = "John";
+        function test() {
+
+            var name = "Mary";
+            console.log(name);
+            console.log(window.name);
+
+            //打錯變數名稱
+            nane = "Tony"; //global scope
+            console.log(nane);
+        }
+        test();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

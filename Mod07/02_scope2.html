@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, 改用local scope
+        //function test() {
+        //    var name = "John";
+        //    var age = 30;
+
+        //    console.log(name + " -- " + age);
+        //}
+        //test();
+
+        //Immediate Function
+        (function () {
+            var name = "John";
+            var age = 30;
+
+            console.log(name + " -- " + age);
+        })();
+
+        //2, 改用物件
+        var $ = function () {
+            var name = "John";
+            var age = 30;
+
+            console.log(name + " -- " + age);
+        }
+        $();
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

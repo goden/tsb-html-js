@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1,
+        var employee1 = {};
+        employee1.name = "John Smith";
+        employee1.age = 21;
+        employee1.salary = 10000;
+
+        employee1.payRise = function (amount) {
+            // Inside a method, "this" means the current object.
+            this.salary += amount;
+            return this.salary;
+        }
+
+        employee1.displayDetails = function () {
+            alert(this.name + " is " + this.age + " and earns " + this.salary);
+        }
+
+
+        //2,
+        var employee2 = {
+            name: "Mary Jones",
+            age: 42,
+            salary: 20000,
+
+            payRise: function (amount) {
+                this.salary += amount;
+                return this.salary;
+            },
+
+            displayDetails: function () {
+                alert(this.name + " is " + this.age + " and earns " + this.salary);
+            }
+        };
+
+
+
+        //Show
+        employee1.displayDetails();
+        employee1.payRise(2000);
+        employee1.displayDetails();
+        employee2.displayDetails();
+        employee2.payRise(1000);
+        employee2.displayDetails();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

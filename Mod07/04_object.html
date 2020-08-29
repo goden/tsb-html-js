@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1,
+        var emp1 = new Object();
+        emp1.name = "John";
+        emp1.age = 30;
+        emp1.getAge = function () {
+            return this.age;
+        }
+
+        //2,
+        var emp2 = {
+            name: "Mary",
+            age: 24,
+            getAge: function () {
+                return this.age;
+            }
+        };
+
+
+        //Show
+        console.log(emp1);
+        console.log(emp2);
+        console.log(emp1.name + " -- " + emp1.age + " -- " + emp1.getAge());
+        console.log(emp2.name + " -- " + emp2.age + " -- " + emp2.getAge());
+        //console.log(emp1.toString());
+        //console.log(emp2.valueOf());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
