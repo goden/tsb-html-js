@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.5.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $("#btnLoad").click(function () {
+
+                //$.get($("#txtUrl").val(), function (data) {
+                //    $("#result").html(data);
+                //}).fail(function (e) {
+                //    alert("Error : " + e.status + " -- " + e.statusText);
+                //});
+
+                $.ajax({
+                    url: $("#txtUrl").val(),
+                    type: "GET",
+                    timeout: 12000,
+                    dataType: "text"
+                }).done(function (data) {
+                    $("#result").html(data);
+                }).fail(function (e) {
+                    alert("Error : " + e.status + " -- " + e.statusText);
+                });
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+    URL : <input id="txtUrl" type="text" value="demo.html" />
+    <input id="btnLoad" type="button" value="Get" />
+    <hr />
+    <div id="result">...</div>
+
+</body>
+</html>

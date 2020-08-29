@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        window.onload = function () {
+
+            document.getElementById("btnGET").onclick = function () {
+
+                //1, 建立Request物件
+                var req = new XMLHttpRequest();
+                //2, 取得網址
+                var url = document.getElementById("txtUrl").value;
+                //3, 建立連線(同步)
+                req.open("GET", url, false);
+                //4, 送出Request
+                req.send();
+                //5, 檢查HTTP狀態碼是否為正常的200
+                if (req.status == 200) {
+                    document.getElementById("result").innerHTML = req.responseText;
+                } else {
+                    alert("Error : " + req.status + " -- " + req.statusText);
+                }
+            };
+
+        }
+
+    </script>
+</head>
+<body>
+
+    URL : <input id="txtUrl" type="text" value="demo.html" />
+    <input id="btnGET" type="button" value="GET" />
+    <hr />
+    <div id="result">....</div>
+
+</body>
+</html>

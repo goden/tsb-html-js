@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.5.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $("#btnLoad").click(function () {
+
+                $("#result").load($("#txtUrl").val());
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+    URL : <input id="txtUrl" type="text" value="demo.html" />
+    <input id="btnLoad" type="button" value="Load" />
+    <hr />
+    <div id="result">...</div>
+
+</body>
+</html>

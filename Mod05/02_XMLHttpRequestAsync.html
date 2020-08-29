@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        window.onload = function () {
+
+            var btnGET = document.getElementById("btnGET");
+            var result = document.getElementById("result");
+
+            btnGET.onclick = function () {
+
+                btnGET.disabled = "disabled";
+
+                //1, 建立Request物件
+                var req = new XMLHttpRequest();
+                //2, 取得網址
+                var url = document.getElementById("txtUrl").value;
+                //3, 註冊Request狀態改變事件
+                req.onreadystatechange = function () {
+                    //4, 判斷是否Response收取完畢
+                    if (req.readyState == 4) {
+                        //5, 檢查HTTP狀態碼是否為正常的200
+                        if (req.status == 200) {
+                            result.innerHTML = req.responseText;
+                        } else {
+                            alert("Error : " + req.status + " -- " + req.statusText);
+                        }
+                        btnGET.disabled = "";
+                    }
+                }
+
+                //6, 建立連線(非同步)
+                req.open("GET", url, true);
+                //7, 送出Request
+                req.send();
+                result.innerHTML = "<h1>資料取得中, 請稍候~</h1>";
+            };
+
+        }
+
+    </script>
+</head>
+<body>
+
+    URL : <input id="txtUrl" type="text" value="demo.html" />
+    <input id="btnGET" type="button" value="GET" />
+    <hr />
+    <div id="result">....</div>
+
+</body>
+</html>

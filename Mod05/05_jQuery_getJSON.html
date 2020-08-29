@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.5.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $("#btnLoad").click(function () {
+
+                //$.get($("#txtUrl").val(), function (data) {
+                //    $("#result").html(data);
+                //}).fail(function (e) {
+                //    alert("Error : " + e.status + " -- " + e.statusText);
+                //});
+
+                $.getJSON($("#txtUrl").val(), function (data) {
+                    
+                    //console.log(data);
+                    for (var d of data) {
+                        $("<li>").text(d.縣市別 + " -- " + d.應開戶數 + " -- " + d.已開戶數).appendTo($("#list1"));
+                    }
+
+                }).fail(function (e) {
+                    alert("Error : " + e.status + " -- " + e.statusText);
+                });
+
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+    URL : <input id="txtUrl" type="text" value="https://apiservice.mol.gov.tw/OdService/download/A17000000J-020104-bwm" />
+    <input id="btnLoad" type="button" value="Get" />
+    <hr />
+    <ol id="list1">
+    </ol>
+
+</body>
+</html>
