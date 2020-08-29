@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+    </style>
+    <script>
+        window.onload = function () {
+            var s = navigator.onLine;
+            if (s) {
+                document.getElementById("r").innerHTML = "連線中";
+
+            } else {
+                document.getElementById("r").innerHTML = "離線中";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="r"></div>
+</body>
+</html>

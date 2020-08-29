@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+        window.onload = function () {
+            var u = navigator.userAgent;
+            console.log(u);
+
+            if (u.indexOf("MSIE") != -1 || u.indexOf("BOIE") != -1) {
+                alert("ie");
+            }
+            if (u.indexOf("Chrome") != -1) {
+                alert("Chrome");
+            }
+            if (u.indexOf("Edge") != -1) {
+                alert("Edge");
+            }
+            if (u.indexOf("Firefox") != -1) {
+                alert("Firefox");
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
