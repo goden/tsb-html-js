@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+        .field{
+            background-color:lightblue;
+        }
+
+        .field > label
+        {
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form name="userLogin" method="post" action="login.aspx">
+        <fieldset>
+            <legend>Enter your log in details:</legend>
+            <div id="usernameField" class="field">
+                <label for="uname">User's Name:</label>
+                <input id="uname" name="username" type="text" required autocomplete="off" autofocus placeholder="First and Last Name" />
+            </div>
+            <div id="passwordField" class="field">
+                <label for="pwd">User's Password:</label>
+                <input id="pwd" name="password" type="password" required placeholder="Password" />
+            </div>
+
+            <div id="carManufacturerField" class="field">
+                <label for="carManufacturer">User's Car:</label>
+                <select id="carManufacturer" name="carManufacturer">
+                    <optgroup label="European">
+                        <option value="volvo">Volvo</option>
+                        <option value="audi">Audi</option>
+                    </optgroup>
+                    <optgroup label="American">
+                        <option value="chrysler">Chrysler</option>
+                        <option value="ford">Ford</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div id="ageCategoryField" class="field">
+                <label for="ageCategory">User's Age:</label>
+                <input id="ageCategory" name="ageCategory" type="text" list="ageRanges" placeholder="ageCategory..." />
+                <datalist id="ageRanges">
+                    <option value="Under twos">兩歲以下</option>
+                    <option value="2 - 7">二到七歲</option>
+                    <option value="8 - 12">八到十二歲</option>
+                    <option value="13-17">十三到十七歲</option>
+                    <option value="Adult">成年</option>
+                </datalist>
+            </div>
+
+            <div id="carDescriptionField" class="field">
+                <label for="carDescription">User's Car:</label>
+                <textarea id="carDescription" name="carDescription" cols="80" rows="5" placeholder="Enter a short description of your car" maxlength="10"></textarea>
+            </div>
+
+            <div id="patField" class="field">
+                <label for="pat">User's Email:</label>
+                <input id="pat" name="pat" type="text" pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" title="請輸入正確格式!!" placeholder="Your Email?" />
+            </div>
+
+
+        </fieldset>
+        <input type="submit" value="Send" />
+    </form>
+
+</body>
+</html>

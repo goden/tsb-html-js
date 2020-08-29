@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+        .validatedFine {
+            border-color: green;
+        }
+
+        .validationError {
+            border-color: red;
+        }
+
+    </style>
+    <script src="../Scripts/utils.js"></script>
+    <script>
+        function validateForm() {
+
+            var msg = "";
+
+            var usname = document.getElementById("uname");
+            var pwd = document.getElementById("pwd");
+            var score = document.getElementById("score");
+
+            if (!isSignificant(usname.value.trim())) {
+                msg += "username is empty!!\r\n";
+                usname.className = "validationError";
+            } else {
+                usname.className = "validatedFine";
+            }
+
+            if (!isSignificant(pwd.value.trim())) {
+                msg += "password is empty!!\r\n";
+                pwd.className = "validationError";
+            } else {
+                pwd.className = "validatedFine";
+            }
+
+            if (!isSignificant(score.value.trim()))
+                msg += "score is empty!!\r\n";
+            else {
+                if (!isAnInteger(score.value.trim()))
+                    msg += "score is not an integer!!\r\n";
+            }
+
+
+            if (msg == "")
+                return true;
+            else {
+                alert(msg);
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <form id="registrationForm" method="post" action="registration.aspx" onsubmit="return validateForm();">
+
+        <div id="usernameField" class="field">
+            <label for="uname">User's Name:</label>
+            <input id="uname" name="username" type="text" autofocus placeholder="First and Last Name" />
+        </div>
+        <div id="passwordField" class="field">
+            <label for="pwd">User's Password:</label>
+            <input id="pwd" name="password" type="password" placeholder="Password" />
+        </div>
+
+        <div id="scoreField" class="field">
+            <label for="score">Score:</label>
+            <input id="score" name="score" type="text" />
+        </div>
+
+        <input type="submit" />
+    </form>
+
+</body>
+</html>
